@@ -11,6 +11,6 @@ public class Task5Test {
     void checkForOnlyLetters() {
         Map<String, List<String>> people = Task5.returnPeople();
         List<String> result = Task5.returnOnlyLetters(people);
-        assertTrue(result.stream().allMatch(s->s.matches("[a-zA-Z]")));
+        assertTrue(result.stream().allMatch(s->s.length()==1 && s.matches("[a-zA-Z]")));
     }
 }

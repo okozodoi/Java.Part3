@@ -42,6 +42,7 @@ public class Task3 {
     public static void main(String[] args) {
 
         List<String> memberNames = memberNames();
+
         System.out.println(aWordsWithLengthFive(memberNames));
 
         System.out.println(countWords(memberNames, "A"));

@@ -13,7 +13,8 @@ public class Task5 {
     public static List<String> returnOnlyLetters(Map<String,List<String>> people) {
         return people.values().stream()
                 .flatMap(List::stream)
-                .filter(s->s.length()==1). collect(Collectors.toList());
+                .filter(s->s.length()==1 && s.matches("[a-zA-Z]")).
+                collect(Collectors.toList());
     }
 
     public static Map<String,List<String>> returnPeople() {

@@ -9,21 +9,21 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class Task2Test {
     @Test
-    void evenNumbersAssertion() {
+    void evenNumbersArray_onRandomInput_allResultsAreEven() {
         List<Integer> randoms = Task1.randomNumbers();
         Integer[] result = Task2.evenNumbersArray(randoms);
         assertTrue(Arrays.stream(result).allMatch(i -> i % 2 == 0));
     }
 
     @Test
-    void cWordsEquals() {
+    void listOfDescendingC_returnsUppercasedCWordsInDescendingOrder() {
         List<String> stringList = Arrays.asList("a1", "a2", "b1", "c1", "c3");
         List<String> cWords = Task2.listOfDescendingC(stringList);
         assertEquals(List.of("C3","C1"), cWords);
     }
 
     @Test
-    void cWordsAssertion() {
+    void listOfDescendingC_allResultsAreUppercase() {
         List<String> stringList = Arrays.asList("a1", "a2", "b1", "c1", "c3");
         List<String> cWords = Task2.listOfDescendingC(stringList);
         assertFalse(cWords.stream().anyMatch(s -> s.equals(s.toLowerCase())));

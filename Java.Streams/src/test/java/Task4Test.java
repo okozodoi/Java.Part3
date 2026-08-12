@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Task4Test {
     @Test
-    void generateOneListOutOfThree(){
+    void generateOneIntegerList_mergesThreeListsInOrder(){
         List<Integer> list1 = Arrays.asList(1,2,3);
         List<Integer> list2 = Arrays.asList(4,5,6);
         List<Integer> list3 = Arrays.asList(7,8,9);
@@ -20,21 +20,21 @@ public class Task4Test {
     }
 
     @Test
-    void generateOneListOutOfStringArray() {
+    void generateOneStringList_flattensTwoDimensionalArray() {
         String[][] dataArray = new String[][]{{"a", "b"}, {"c", "d"}, {"e", "f"}, {"g", "h"}};
 
         assertEquals(List.of("a", "b", "c","d","e","f","g","h"), Task4.generateOneStringList(dataArray));
     }
 
     @Test
-    void removeDuplicates() {
+    void checkForDistinctValuesOnly() {
         ArrayList<Integer> numbersList = new ArrayList<>(Arrays.asList(1, 1, 2, 3, 3, 3, 4, 5, 6, 6, 6, 7));
 
         assertEquals(List.of(1,2,3,4,5,6,7), Task4.removeDuplicates(numbersList));
     }
 
     @Test
-    void listToMap() {
+    void listToMap_countsOccurrencesOfEachNumber() {
         ArrayList<Integer> numbersList = new ArrayList<>(Arrays.asList(1, 1, 2, 3, 3, 3, 4, 5, 6, 6, 6, 7));
 
         assertEquals(Map.of(1,2L,2,1L,3,3L,4,1L,5,1L,6,3L,7,1L),
